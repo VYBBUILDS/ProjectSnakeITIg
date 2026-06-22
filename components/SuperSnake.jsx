@@ -39,10 +39,14 @@ export default function SuperSnake() {
   const [difficulty, setDifficulty] = useState('MEDIUM');
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [gameOver, setGameOver] = useState(false);
-  const [highScore, setHighScore] = useState(() => {
+  const [highScore, setHighScore] = useState(0);
+
+useEffect(() => {
+  if (typeof window !== 'undefined') {
     const saved = localStorage.getItem('snakeHighScore');
-    return saved ? parseInt(saved) : 0;
-  });
+    setHighScore(saved ? parseInt(saved) : 0);
+  }
+}, []);
 
   // Initialize game state
   const initializeGame = useCallback(() => {
