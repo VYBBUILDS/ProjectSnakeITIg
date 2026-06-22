@@ -1,0 +1,4 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+body{margin:0;background:#0f172a;color:#e2e8f0;font-family:system-ui}canvas{image-rendering:pixelated}
