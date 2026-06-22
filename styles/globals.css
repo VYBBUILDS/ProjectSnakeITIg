@@ -1,4 +1,9 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-body{margin:0;background:#0f172a;color:#e2e8f0;font-family:system-ui}canvas{image-rendering:pixelated}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html{scroll-behavior:smooth}
+body{margin:0;padding:0;background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#e2e8f0;min-height:100vh;font-family:system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}
+canvas{image-rendering:pixelated}
+button{transition:all 0.2s ease}
+button:hover:not(:disabled){transform:translateY(-2px)}
